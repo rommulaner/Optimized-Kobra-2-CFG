@@ -12,7 +12,9 @@ How to:
 7. With the new config the whole calibration needs to be done (Sensor calibration, Input Shaping, Autoleveling) as everything of this is at stock stettings.
    Note: Do the calibration steps as written above, because Input Shaping calibration can lead to missing steps during the test and the sensor calibration doesn't perform a homing of all axis before the probing and this will mess up the sensor calibration values
    Tip: Heatup the bed manually and let it stay for about 10 minutes before doing the autoleveling to get a better heat distribution and better leveling results
-8. Now you have a 9x9 bedmesh with no interpolation inbetween the probed points as Klipper results in overshoots if the bedmesh is higher than 6x6. Also the probing is bit quicker to save some time and the z probing is done in the centre of the bed
+8. Now you have a 9x9 bedmesh with no interpolation inbetween the probed points as Klipper results in overshoots if the bedmesh is higher than 6x6. 
+   Also the probing is bit quicker to save some time and the z probing is done in the centre of the bed.
+   Note: Higher values than 9x9 are ignored by the firmware for any reason. If you set it to e.g. 11x11 it's doing a 11x11 probing but doesn't save the bedmesh.
 
 Attention!
 Changing values in the config by yourself can lead to bricked mainboard with no way back if you are not sure what you are doing!
